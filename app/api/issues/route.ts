@@ -30,7 +30,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!session) return null;
     // Create a new issue with the authenticated user
     const newIssue = await prisma.issue.create({
       data: {
